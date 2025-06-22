@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Minhas Listas de Filmes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8fafc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .categoria {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<div class="container py-5">
+  <h1 class="text-center mb-5">🎞️ Suas listas de filmes, {{ nome }}</h1>
+
+  <div class="categoria">
+    <h2>🎬 Já assisti</h2>
+    <ul>
+      {% for filme in categorias.ja_assisti %}
+        <li>{{ filme.titulo }}</li>
+      {% else %}
+        <p><em>Nenhum filme marcado como assistido.</em></p>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="categoria">
+    <h2>🕒 Quero assistir</h2>
+    <ul>
+      {% for filme in categorias.vou_assistir %}
+        <li>{{ filme.titulo }}</li>
+      {% else %}
+        <p><em>Nenhum filme na lista de "quero assistir".</em></p>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="categoria">
+    <h2>❌ Não gostei</h2>
+    <ul>
+      {% for filme in categorias.nao_gostei %}
+        <li>{{ filme.titulo }}</li>
+      {% else %}
+        <p><em>Nenhum filme marcado como "não gostei".</em></p>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="text-center">
+    <a href="/meus-filmes/pdf" class="btn btn-danger">📄 Baixar PDF</a>
+    <a href="/" class="btn btn-outline-secondary ms-2">⬅️ Voltar para Home</a>
+  </div>
+
+  <footer class="mt-5">
+    Desenvolvido por André Pedronila • Projeto educacional
+  </footer>
+</div>
+</body>
+</html>

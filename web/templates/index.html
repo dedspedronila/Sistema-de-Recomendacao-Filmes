@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Recomendação</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+  <div class="container mt-5">
+    <div class="card shadow p-4 bg-secondary text-light">
+      <h2 class="mb-4">🎬 Bem-vindo ao Sistema de Recomendação de Filmes</h2>
+
+      <form action="/preferencias" method="POST">
+        <div class="mb-3">
+          <label class="form-label">Nome de usuário</label>
+          <input type="text" class="form-control" name="nome" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Gêneros que você gosta (ex: Ação, Drama)</label>
+          <input type="text" class="form-control" name="generos" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Temas favoritos (ex: hacker, vingança)</label>
+          <input type="text" class="form-control" name="tags" required>
+        </div>
+
+        <button type="submit" class="btn btn-light">Ver recomendações</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

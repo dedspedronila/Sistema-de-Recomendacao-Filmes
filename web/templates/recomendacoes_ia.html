@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Resultados da IA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1e293b;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    .list-group-item {
+      background-color: #ffffff;
+      border-color: #e2e8f0;
+      color: #1e293b;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card p-5 w-100" style="max-width: 700px;">
+      <h2 class="mb-4">🤖 Resultados com base em: <em>"{{ descricao }}"</em></h2>
+
+      {% if filmes %}
+        <ul class="list-group list-group-flush">
+          {% for filme in filmes %}
+            <li class="list-group-item">
+              <strong>{{ filme.titulo }}</strong><br>
+              <small>{{ filme.genero | join(', ') }}</small>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>Nenhum filme encontrado com base na descrição fornecida.</p>
+      {% endif %}
+
+      <div class="d-grid gap-2 mt-4">
+        <a href="/ia" class="btn btn-primary">🔄 Fazer nova busca</a>
+        <a href="/" class="btn btn-secondary">🏠 Voltar à Home</a>
+      </div>
+
+      <footer class="mt-4">
+        Desenvolvido por André Pedronila • Projeto educacional
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

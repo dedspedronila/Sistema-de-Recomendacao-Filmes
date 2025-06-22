@@ -1,0 +1,53 @@
+{
+  "andré": {
+    "preferencias": {
+      "generos": [
+        "Ação"
+      ],
+      "tags": [
+        "hacker",
+        "tiro"
+      ]
+    },
+    "status_filmes": {}
+  },
+  "cleiton": {
+    "preferencias": {
+      "generos": [
+        "Action"
+      ],
+      "tags": [
+        "hacker"
+      ]
+    },
+    "status_filmes": {
+      "44": "vou_assistir"
+    }
+  },
+  "andre": {
+    "preferencias": {
+      "generos": [
+        "Action"
+      ],
+      "tags": [
+        "vengence"
+      ]
+    },
+    "status_filmes": {
+      "10": "ja_assisti"
+    }
+  },
+  "pedro": {
+    "preferencias": {
+      "generos": [
+        "Action"
+      ],
+      "tags": [
+        "romance"
+      ]
+    },
+    "status_filmes": {
+      "66": "nao_gostei"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+# Ambiente virtual
+venv/
+.VENV/
+.venv/
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# IDEs e caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.idea/
+.vscode/
+
+# Arquivos gerados
+*.exe
+*.log
+
+# Dados pessoais e sensíveis
+*.pdf
+*.txt
+usuarios_db.json
+
+# Banco de dados (se houver)
+*.db
+*.sqlite3

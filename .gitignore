@@ -21,9 +21,12 @@ __pycache__/
 *.log
 
 # Dados pessoais e sensíveis
+usuarios_db.json
 *.pdf
 *.txt
-usuarios_db.json
+*.json
+!filmes_db.json
+
 
 # Banco de dados (se houver)
 *.db
